@@ -18,6 +18,5 @@ setup(
     python_requires='>=3.6',  # Specify the Python versions supported
     install_requires=[
         'geopandas==1.0.1'
-        'uuid'
     ],
 )
