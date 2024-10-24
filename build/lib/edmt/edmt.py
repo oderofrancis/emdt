@@ -93,6 +93,7 @@ def generate_uuid( df,**addl_kwargs):
     Returns a string of uuids.
     """
     df['id'] = [str(uuid.uuid4()).lower() for _ in range(len(df))]
+    df = df.set_index('id').reset_index()
     return df
 
 
