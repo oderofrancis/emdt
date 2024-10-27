@@ -1,6 +1,7 @@
 README.md
 setup.py
 edmt/__init__.py
+edmt/_version.py
 edmt/base.py
 edmt/edmt.py
 edmt/explore.py

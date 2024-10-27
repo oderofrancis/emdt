@@ -57,26 +57,4 @@ def gdf_to_sdf(gdf, original_crs=4326, target_crs=None):
     # Return sdf
     return sdf
     
-# def generate_uuid( df,index=False,**addl_kwargs):
-#     """
-#     Returns a string of uuids.
-#     """
-
-#     for col in df.columns:
-#         # Check if the column is of string type and if values match UUID format
-#         if pd.api.types.is_string_dtype(df[col]):
-#             if df[col].str.match(r'^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$').all():
-#                 # UUID column detected, skip creation
-#                 print(f"Column '{col}' contains UUID-like values. Skipping UUID generation.")
-#                 return df
-    
-#     # No UUID-like column found; create 'id' column with UUIDs
-#     df['id'] = [str(uuid.uuid4()).lower() for _ in range(len(df))]
-
-#     if index==False:
-#         return df
-#     elif index==True:
-#         return df.set_index('id').reset_index()
-#     else:
-#         pass
 
