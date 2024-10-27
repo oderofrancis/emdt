@@ -64,9 +64,9 @@ def generate_uuid( df,index=False,**addl_kwargs):
     df['id'] = [str(uuid.uuid4()).lower() for _ in range(len(df))]
 
     if index==False:
-        return df
+        return df.reset_index()
     elif index==True:
-        return df.set_index('id')
+        return df.set_index('id').reset_index()
     else:
         pass
 
