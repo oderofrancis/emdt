@@ -31,8 +31,6 @@ def init(silent=False, force=False):
             print("EDMT already initialized.")
         return
 
-   
-
     import pandas as pd
 
     pd.options.plotting.backend = "plotly"

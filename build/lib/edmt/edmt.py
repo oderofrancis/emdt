@@ -1,3 +1,3 @@
-from .base.init import init
+from .base.init import *
 from .base.base import *
 
