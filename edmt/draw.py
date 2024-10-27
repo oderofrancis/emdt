@@ -32,7 +32,7 @@ _MAP_KWARGS = [
 ]
 
 
-def _draw(
+def _explore(
     df,
     column=None,
     cmap=None,
