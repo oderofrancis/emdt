@@ -58,11 +58,16 @@ def gdf_to_sdf(gdf, original_crs=4326, target_crs=None):
     return sdf
     
 ## Function to generate UUID
+<<<<<<< HEAD
 def generate_uuid( df,index=False,**addl_kwargs):
+=======
+def generate_uuid( df,**addl_kwargs):
+>>>>>>> bb55848d6933fbdceb51e4915c5aa37f85442d5a
     """
     Returns a string of uuids.
     """
     df['id'] = [str(uuid.uuid4()).lower() for _ in range(len(df))]
+<<<<<<< HEAD
 
     if index==False:
         return df
@@ -71,3 +76,8 @@ def generate_uuid( df,index=False,**addl_kwargs):
     else:
         pass
      
+=======
+    return df.set_index('id')
+
+
+>>>>>>> bb55848d6933fbdceb51e4915c5aa37f85442d5a

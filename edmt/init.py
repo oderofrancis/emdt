@@ -14,7 +14,11 @@ __initialized = False
 
 def init(silent=False, force=False):
     """
+<<<<<<< HEAD
     Initializes the environment with ecoscope-specific customizations.
+=======
+    Initializes the environment with Library-specific customizations.
+>>>>>>> bb55848d6933fbdceb51e4915c5aa37f85442d5a
 
     Parameters
     ----------
@@ -25,6 +29,7 @@ def init(silent=False, force=False):
 
     """
 
+<<<<<<< HEAD
     global __initialized
     if __initialized and not force:
         if not silent:
@@ -62,3 +67,6 @@ def init(silent=False, force=False):
 
 
 __all__ = ["base"]
+=======
+    print(ASCII)
+>>>>>>> bb55848d6933fbdceb51e4915c5aa37f85442d5a
