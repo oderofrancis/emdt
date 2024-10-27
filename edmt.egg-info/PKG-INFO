@@ -11,3 +11,5 @@ Classifier: Operating System :: OS Independent
 Requires-Python: >=3.6
 Description-Content-Type: text/markdown
 Requires-Dist: geopandas==1.0.1
+Requires-Dist: plotly==5.24.1
+Requires-Dist: tqdm==4.66.5
