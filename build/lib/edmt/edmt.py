@@ -1,3 +1,4 @@
 from .init import *
 from .base import *
-from .test import *
+from .gen_uuid import *
+from .draw import *
