@@ -65,7 +65,7 @@ def _explore(
     map_kwds={},
     **kwargs,
 ):
-    
+
     """Interactive map based on GeoPandas and folium/leaflet.js
 
     Generate an interactive leaflet map based on :class:`~geopandas.GeoDataFrame`
