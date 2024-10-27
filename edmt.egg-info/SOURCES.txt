@@ -2,6 +2,7 @@ README.md
 setup.py
 edmt/__init__.py
 edmt/base.py
+edmt/draw.py
 edmt/edmt.py
 edmt/gen_uuid.py
 edmt/init.py
