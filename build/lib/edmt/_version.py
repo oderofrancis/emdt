@@ -2,10 +2,10 @@ import json
 
 version_json = '''
 {
- "date": "future",
- "dirty": true,
- "error": Present,
- "full-revisionid": ",
+ "date": "2024-12-02T14:23:16+0200",
+ "dirty": false,
+ "error": null,
+ "full-revisionid": "Not Deployed",
  "version": "1.0.0"
 }
 '''  # END VERSION_JSON
