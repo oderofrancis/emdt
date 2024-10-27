@@ -5,6 +5,7 @@ edmt/base.py
 edmt/edmt.py
 edmt/init.py
 edmt/load.py
+edmt/test.py
 edmt.egg-info/PKG-INFO
 edmt.egg-info/SOURCES.txt
 edmt.egg-info/dependency_links.txt
