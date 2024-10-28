@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='edmt',  # Replace with your package name
-    version='1.0',          # Initial version
+    version='1.0.0',          # Initial version
     author='Odero & Kuloba',
     author_email='francisodero10@gmail.com',
     description='Environmental Data Management Toolbox',
@@ -19,6 +19,9 @@ setup(
     install_requires=[
         'geopandas==1.0.1',
         'plotly==5.24.1',
-        'tqdm==4.66.5'
+        'tqdm==4.66.5',
+        'folium==0.18.0',
+        'mapclassify==2.8.1',
+        'matplotlib==3.9.2'
     ],
 )
