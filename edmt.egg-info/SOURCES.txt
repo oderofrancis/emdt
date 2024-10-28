@@ -4,7 +4,6 @@ edmt/__init__.py
 edmt/_version.py
 edmt/base.py
 edmt/edmt.py
-edmt/explore.py
 edmt/gen_uuid.py
 edmt/init.py
 edmt/load.py

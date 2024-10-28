@@ -2,11 +2,10 @@
 import pandas as pd
 import geopandas as gpd
 from shapely.validation import make_valid
-import uuid
 
 pd.set_option('display.max_columns', None)
 
-########################################################################################################3#
+#########################################################################################################
 ##  Convert sdf to gdf
 def sdf_to_gdf(sdf,original_crs=None,target_crs=4326,**addl_kwargs):
     """
@@ -33,7 +32,7 @@ def sdf_to_gdf(sdf,original_crs=None,target_crs=4326,**addl_kwargs):
     # Return geodataframe
     return gdf
     
-###############################################################################################################
+#########################################################################################################
 ## Convert gdf to sdf
 
 def gdf_to_sdf(gdf, original_crs=4326, target_crs=None):
@@ -56,5 +55,4 @@ def gdf_to_sdf(gdf, original_crs=4326, target_crs=None):
     
     # Return sdf
     return sdf
-    
 
