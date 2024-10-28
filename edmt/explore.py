@@ -32,7 +32,7 @@ _MAP_KWARGS = [
 ]
 
 
-def _explore(
+def draw(
     df,
     column=None,
     cmap=None,
@@ -1020,7 +1020,7 @@ def _explore_geoseries(
         folium :class:`~folium.folium.Map` instance
 
     """
-    return _explore(
+    return draw(
         s,
         color=color,
         m=m,
