@@ -55,4 +55,3 @@ def gdf_to_sdf(gdf, original_crs=4326, target_crs=None):
     
     # Return sdf
     return sdf
-
