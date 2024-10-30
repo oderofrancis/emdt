@@ -26,18 +26,15 @@ def generate_uuid(df, index=False):
     # Define UUID pattern
     uuid_pattern = r'^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$'
 
-    # Check if any column contains UUID-like values
-    # for col in df.columns:
-    #     if pd.api.types.is_string_dtype(df[col]) and df[col].str.match(uuid_pattern).all():
-    #         print(f"Column '{col}' contains UUID-like values. Skipping UUID generation.")
-
-    #         # make the column with uuid to set_index('{col}')
-    #         return df.set_index(col)
+    
     for col in df.columns:
         # Check if column contains UUID-like values
         if pd.api.types.is_string_dtype(df[col]) and df[col].str.match(uuid_pattern).all():
-            print(f"Column '{col}' contains UUID-like values. Setting it as index.")
-            return df.set_index(col).reset_index()
+            print(f"Column '{col}' contains UUID-like values.")
+            if index:
+                return df.set_index(col).reset_index()
+            else:
+                return df.reset_index()
         
     print("No UUID-like column found. Generating one to the DataFrame.")
 
