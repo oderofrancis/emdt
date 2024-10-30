@@ -57,8 +57,3 @@ def init(silent=False, force=False):
     __initialized = True
     if not silent:
         print(ASCII)
-
-# __all__ = ["base.py","init.py","load.py"]
-
-def __version__():
-    print("edmt 1.0.0")
