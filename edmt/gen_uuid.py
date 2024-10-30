@@ -30,7 +30,7 @@ def generate_uuid(df, index=False):
         if pd.api.types.is_string_dtype(df[col]) and df[col].str.match(uuid_pattern).all():
             print(f"Column '{col}' contains UUID-like values.")
             if index:
-                return df.set_index(col)
+                return df.set_index(col).reset_index()
             else:
                 return df  # Return without modifying the index
 
@@ -44,6 +44,6 @@ def generate_uuid(df, index=False):
 
     # Set 'uuid' as index if requested
     if index:
-        df = df.set_index('uuid')
+        df = df.set_index('uuid').reset_index()
 
     return df
