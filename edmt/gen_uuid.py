@@ -2,7 +2,7 @@
 import uuid
 import pandas as pd
 
-def generate_uuid(df, ignore_index=False):
+def generate_uuid(df, index=False):
     """
     Adds a unique 'id' column with UUIDs to the DataFrame if no existing UUID-like column is found.
     Does not generate new UUIDs if UUIDs are already assigned in an 'id' column.
@@ -30,7 +30,9 @@ def generate_uuid(df, ignore_index=False):
     for col in df.columns:
         if pd.api.types.is_string_dtype(df[col]) and df[col].str.match(uuid_pattern).all():
             print(f"Column '{col}' contains UUID-like values. Skipping UUID generation.")
-            return df
+
+            # make the column with uuid to set_index('{col}')
+            return df.set_index(col)
 
     # Add or update 'id' column with UUIDs
     if 'uuid' not in df.columns:
@@ -38,8 +40,8 @@ def generate_uuid(df, ignore_index=False):
     else:
         df['uuid'] = df['uuid'].apply(lambda x: x if pd.notnull(x) else str(uuid.uuid4()).lower())
 
-    # Set 'id' as index if requested
-    if ignore_index:
+    # Set 'uuid' as index if requested
+    if index:
         df = df.set_index('uuid').reset_index()
 
     return df
