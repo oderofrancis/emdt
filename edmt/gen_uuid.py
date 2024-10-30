@@ -1,18 +1,17 @@
-
 import uuid
 import pandas as pd
 
 def generate_uuid(df, index=False):
     """
-    Adds a unique 'id' column with UUIDs to the DataFrame if no existing UUID-like column is found.
-    Does not generate new UUIDs if UUIDs are already assigned in an 'id' column.
+    Adds a unique 'uuid' column with UUIDs to the DataFrame if no existing UUID-like column is found.
+    Does not generate new UUIDs if UUIDs are already assigned in a 'uuid' column.
 
     Args:
         df (pd.DataFrame): The DataFrame to which UUIDs will be added.
-        index (bool): If True, sets 'id' as the index and then resets it as a column.
+        index (bool): If True, sets 'uuid' as the index. Otherwise, 'uuid' remains a column.
 
     Returns:
-        pd.DataFrame: DataFrame with an 'id' column added if no UUID-like column exists.
+        pd.DataFrame: DataFrame with a 'uuid' column added if no UUID-like column exists.
     Raises:
         ValueError: If 'df' is not a DataFrame or if it's empty.
     """
@@ -26,19 +25,18 @@ def generate_uuid(df, index=False):
     # Define UUID pattern
     uuid_pattern = r'^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$'
 
-    
+    # Check for existing UUID-like columns
     for col in df.columns:
-        # Check if column contains UUID-like values
         if pd.api.types.is_string_dtype(df[col]) and df[col].str.match(uuid_pattern).all():
             print(f"Column '{col}' contains UUID-like values.")
             if index:
-                return df.set_index(col).reset_index()
+                return df.set_index(col)
             else:
-                return df.reset_index()
-        
-    print("No UUID-like column found. Generating one to the DataFrame.")
+                return df  # Return without modifying the index
 
-    # Add or update 'id' column with UUIDs
+    print("No UUID-like column found. Generating 'uuid' column in the DataFrame.")
+
+    # Add or update 'uuid' column with UUIDs
     if 'uuid' not in df.columns:
         df['uuid'] = [str(uuid.uuid4()).lower() for _ in range(len(df))]
     else:
@@ -46,6 +44,6 @@ def generate_uuid(df, index=False):
 
     # Set 'uuid' as index if requested
     if index:
-        df = df.set_index('uuid').reset_index()
+        df = df.set_index('uuid')
 
     return df
