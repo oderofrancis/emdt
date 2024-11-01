@@ -23,7 +23,7 @@ def shorten(url: Optional[str] = None) -> Optional[str]:
         type_tiny = pyshorteners.Shortener()
         short_url = type_tiny.tinyurl.short(url)
         logging.info(f"The shortened URL is: {short_url}")
-        print("The shortened url is : " + short_url)
+        # print("The shortened url is : " + short_url)
     except Exception as e:
         logging.error(f"An error occurred while shortening the URL: {e}")
         return None
