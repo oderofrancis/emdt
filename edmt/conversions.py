@@ -1,13 +1,3 @@
-
-
-# shorten url
-# def shorten(url=None):
-#     import pyshorteners as ps
-#     type_tiny = ps.Shortener()
-#     short_url = type_tiny.tinyurl.short(url)
-#     print("The shortened url is : " + short_url)
-
-
 import logging
 from typing import Optional
 import pyshorteners
@@ -33,7 +23,7 @@ def shorten(url: Optional[str] = None) -> Optional[str]:
         type_tiny = pyshorteners.Shortener()
         short_url = type_tiny.tinyurl.short(url)
         logging.info(f"The shortened URL is: {short_url}")
-        return short_url
+        # print("The shortened url is : " + short_url)
     except Exception as e:
         logging.error(f"An error occurred while shortening the URL: {e}")
         return None
