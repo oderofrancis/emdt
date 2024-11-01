@@ -3,6 +3,7 @@ setup.py
 edmt/__init__.py
 edmt/_version.py
 edmt/base.py
+edmt/conversions.py
 edmt/edmt.py
 edmt/gen_uuid.py
 edmt/init.py

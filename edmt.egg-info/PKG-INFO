@@ -16,3 +16,4 @@ Requires-Dist: tqdm==4.66.5
 Requires-Dist: folium==0.18.0
 Requires-Dist: mapclassify==2.8.1
 Requires-Dist: matplotlib==3.9.2
+Requires-Dist: pyshorteners==1.0.1

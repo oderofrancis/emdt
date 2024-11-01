@@ -22,6 +22,7 @@ setup(
         'tqdm==4.66.5',
         'folium==0.18.0',
         'mapclassify==2.8.1',
-        'matplotlib==3.9.2'
+        'matplotlib==3.9.2',
+        'pyshorteners==1.0.1'
     ],
 )
