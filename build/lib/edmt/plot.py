@@ -17,7 +17,7 @@ def plot_df(df, column=None, ax=None):
         ax=ax,
         alpha=0.5, edgecolor='k',
         column=column, categorical=True,
-        # legend=True, legend_kwds={'loc': 'upper left'},
+        legend=True, legend_kwds={'loc': 'upper left'},
     )
     cx.add_basemap(ax, crs=df.crs, source=cx.providers.CartoDB.Positron)
 
