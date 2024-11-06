@@ -23,6 +23,8 @@ setup(
         'folium==0.18.0',
         'mapclassify==2.8.1',
         'matplotlib==3.9.2',
-        'pyshorteners==1.0.1'
+        'pyshorteners==1.0.1',
+        'h3==4.1.2',
+        'contextily==1.6.2'
     ],
 )
