@@ -1,2 +1,5 @@
 required.txt
 testing.py
+/env
+test.ipynb
+edmt/__pycache__
