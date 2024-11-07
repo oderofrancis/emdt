@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import h3
 import contextily as cx
 
-def plot_df(df, column=None, ax=None):
+def plot_df(df, column=None, ax=None,legend=None):
     "Plot based on the `geometry` column of a GeoPandas dataframe"
     df = df.copy()
     df = df.to_crs(epsg=3857)  # web mercator
@@ -17,7 +17,7 @@ def plot_df(df, column=None, ax=None):
         ax=ax,
         alpha=0.5, edgecolor='k',
         column=column, categorical=True,
-        legend=True, legend_kwds={'loc': 'upper left'},
+        legend=legend, legend_kwds={'loc': 'upper left'},
     )
     cx.add_basemap(ax, crs=df.crs, source=cx.providers.CartoDB.Positron)
 
