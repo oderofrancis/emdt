@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='edmt',  # Replace with your package name
-    version='1.0.0',          # Initial version
+    version='1.0.1',          # Initial version
     author='Odero & Kuloba',
     author_email='francisodero10@gmail.com',
     description='Environmental Data Management Toolbox',

@@ -37,3 +37,33 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+
+"""
+Create a function that accepts a pdf file and convert to word 
+provide an output link
+provide a pdf link to the function 
+"""
+def pdf_word(url=None,dir=None,pdf=None,word=None):
+
+    """
+    A function to convert pdf to word using pdf2word
+    """
+
+    if url is None:
+        logging.error("No URL provided to shorten.")
+        return None
+
+    try:
+        """
+        Add the implementation to perform the conversion
+        """
+
+
+    except Exception as e:
+        logging.error(f"An error occurred while shortening the URL: {e}")
+        return None
+
+    return pdf_word
